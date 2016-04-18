@@ -32,11 +32,15 @@ public class PingPong {
 
   public static List<String> pingPong(Integer inputNumber) {
     List<String> returnVals = new ArrayList<String>();
-    for (Integer i = 0; i < inputNumber; i++) {
-      if (inputNumber % 3 == 0) {
+    for (Integer i = 1; i <= inputNumber; i++) {
+      if (i % 15 == 0) {
+        returnVals.add("Ping Pong");
+      } else if (i % 3 == 0) {
         returnVals.add("Ping");
+      } else if (i % 5 == 0) {
+        returnVals.add("Pong");
       } else {
-        returnVals.add(Integer.toString(inputNumber));
+        returnVals.add(Integer.toString(i));
       }
     }
     return returnVals;
